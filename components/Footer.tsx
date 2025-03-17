@@ -45,116 +45,119 @@ export default function Footer() {
               Discover the latest trends in fashion and explore our curated collection of clothing and jewelry.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <Link href="#" className="text-gray-400 hover:text-white transition-colors">
                 <Facebook className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              </Link>
+              <Link href="#" className="text-gray-400 hover:text-white transition-colors">
                 <Twitter className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              </Link>
+              <Link href="#" className="text-gray-400 hover:text-white transition-colors">
                 <Instagram className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              </Link>
+              <Link href="#" className="text-gray-400 hover:text-white transition-colors">
                 <Youtube className="w-5 h-5" />
-              </a>
+              </Link>
             </div>
           </div>
 
           {/* Shop Links */}
-          <div>
-            <h3 className="text-white font-medium mb-6">Shop</h3>
-            <ul className="space-y-4">
-              <li>
-                <Link href="/collections/women" className="text-gray-400 hover:text-white transition-colors">
-                  Women's Collection
-                </Link>
-              </li>
-              <li>
-                <Link href="/collections/men" className="text-gray-400 hover:text-white transition-colors">
-                  Men's Collection
-                </Link>
-              </li>
-              <li>
-                <Link href="/collections/kids" className="text-gray-400 hover:text-white transition-colors">
-                  Kids' Collection
-                </Link>
-              </li>
-              <li>
-                <Link href="/collections/jewelry" className="text-gray-400 hover:text-white transition-colors">
-                  Jewelry
-                </Link>
-              </li>
-              <li>
-                <Link href="/sale" className="text-gray-400 hover:text-white transition-colors">
-                  Sale
-                </Link>
-              </li>
-              <li>
-                <Link href="/new-arrivals" className="text-gray-400 hover:text-white transition-colors">
-                  New Arrivals
-                </Link>
-              </li>
-            </ul>
-          </div>
+          <div className='flex md:flex-row flex-col gap-2 justify-evenly'>
 
-          {/* Help Links */}
-          <div>
-            <h3 className="text-white font-medium mb-6">Help</h3>
-            <ul className="space-y-4">
-              <li>
-                <Link href="/customer-service" className="text-gray-400 hover:text-white transition-colors">
-                  Customer Service
-                </Link>
-              </li>
-              <li>
-                <Link href="/track-order" className="text-gray-400 hover:text-white transition-colors">
-                  Track Your Order
-                </Link>
-              </li>
-              <li>
-                <Link href="/returns" className="text-gray-400 hover:text-white transition-colors">
-                  Returns & Exchanges
-                </Link>
-              </li>
-              <li>
-                <Link href="/shipping" className="text-gray-400 hover:text-white transition-colors">
-                  Shipping Information
-                </Link>
-              </li>
-              <li>
-                <Link href="/size-guide" className="text-gray-400 hover:text-white transition-colors">
-                  Size Guide
-                </Link>
-              </li>
-              <li>
-                <Link href="/faq" className="text-gray-400 hover:text-white transition-colors">
-                  FAQ
-                </Link>
-              </li>
-            </ul>
-          </div>
+              <div>
+                <h3 className="text-white font-medium mb-6">Shop</h3>
+                <ul className="space-y-4">
+                  <li>
+                    <Link href="/collections/women" className="text-gray-400 hover:text-white transition-colors">
+                      Womens Collection
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/collections/men" className="text-gray-400 hover:text-white transition-colors">
+                      Mens Collection
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/collections/kids" className="text-gray-400 hover:text-white transition-colors">
+                      Kids Collection
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/collections/jewelry" className="text-gray-400 hover:text-white transition-colors">
+                      Jewelry
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/sale" className="text-gray-400 hover:text-white transition-colors">
+                      Sale
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/new-arrivals" className="text-gray-400 hover:text-white transition-colors">
+                      New Arrivals
+                    </Link>
+                  </li>
+                </ul>
+              </div>
 
-          {/* Contact Information */}
-          <div>
-            <h3 className="text-white font-medium mb-6">Contact Us</h3>
-            <ul className="space-y-4">
-              <li className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-indigo-400 flex-shrink-0 mt-1" />
-                <span className="text-gray-400">
-                  123 Fashion Street
-                  <br />
-                  New York, NY 10001
-                </span>
-              </li>
-              <li className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-indigo-400 flex-shrink-0" />
-                <span className="text-gray-400">+1 (555) 123-4567</span>
-              </li>
-              <li className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-indigo-400 flex-shrink-0" />
-                <span className="text-gray-400">support@luxestyle.com</span>
-              </li>
-            </ul>
+              {/* Help Links */}
+              <div>
+                <h3 className="text-white font-medium mb-6">Help</h3>
+                <ul className="space-y-4">
+                  <li>
+                    <Link href="/customer-service" className="text-gray-400 hover:text-white transition-colors">
+                      Customer Service
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/track-order" className="text-gray-400 hover:text-white transition-colors">
+                      Track Your Order
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/returns" className="text-gray-400 hover:text-white transition-colors">
+                      Returns & Exchanges
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/shipping" className="text-gray-400 hover:text-white transition-colors">
+                      Shipping Information
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/size-guide" className="text-gray-400 hover:text-white transition-colors">
+                      Size Guide
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/faq" className="text-gray-400 hover:text-white transition-colors">
+                      FAQ
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Contact Information */}
+              <div>
+                <h3 className="text-white font-medium mb-6">Contact Us</h3>
+                <ul className="space-y-4">
+                  <li className="flex items-start space-x-3">
+                    <MapPin className="w-5 h-5 text-indigo-400 flex-shrink-0 mt-1" />
+                    <span className="text-gray-400">
+                      123 Fashion Street
+                      <br />
+                      New York, NY 10001
+                    </span>
+                  </li>
+                  <li className="flex items-center space-x-3">
+                    <Phone className="w-5 h-5 text-indigo-400 flex-shrink-0" />
+                    <span className="text-gray-400">+1 (555) 123-4567</span>
+                  </li>
+                  <li className="flex items-center space-x-3">
+                    <Mail className="w-5 h-5 text-indigo-400 flex-shrink-0" />
+                    <span className="text-gray-400">support@luxestyle.com</span>
+                  </li>
+                </ul>
+              </div>
           </div>
         </div>
 

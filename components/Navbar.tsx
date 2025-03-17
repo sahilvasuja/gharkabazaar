@@ -2,14 +2,14 @@
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { ShoppingBag, Search, User, Heart, Menu, X, ChevronDown } from 'lucide-react';
+import { ShoppingBag, Search, User, Heart, Menu, X } from 'lucide-react';
 import SearchOverlay from './SearchOverlay';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  // const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   // Lock body scroll when mobile menu is open
   useEffect(() => {
@@ -34,13 +34,13 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleDropdown = (dropdown: string) => {
-    if (activeDropdown === dropdown) {
-      setActiveDropdown(null);
-    } else {
-      setActiveDropdown(dropdown);
-    }
-  };
+  // const toggleDropdown = (dropdown: string) => {
+  //   if (activeDropdown === dropdown) {
+  //     setActiveDropdown(null);
+  //   } else {
+  //     setActiveDropdown(dropdown);
+  //   }
+  // };
 
   return (
     <>
@@ -59,10 +59,10 @@ export default function Navbar() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 rounded-full hover:bg-gray-100 lg:hidden"
+              className="p-2 rounded-full hover:bg-gray-100 text-gray-800 lg:hidden"
               aria-label="Menu"
             >
-              <Menu className="w-6 h-6" />
+              <Menu className="w-6 h-6 text-gray-800" />
             </button>
 
             {/* Logo */}
@@ -94,7 +94,7 @@ export default function Navbar() {
             <div className="flex items-center space-x-4">
               <button
                 onClick={() => setIsSearchOpen(true)}
-                className="p-2 rounded-full hover:bg-gray-100 hidden sm:flex"
+                className="p-2 rounded-full hover:bg-gray-100  hidden sm:flex"
                 aria-label="Search"
               >
                 <Search className="w-5 h-5" />
@@ -111,14 +111,14 @@ export default function Navbar() {
                 className="p-2 rounded-full hover:bg-gray-100 hidden sm:flex"
                 aria-label="Account"
               >
-                <User className="w-5 h-5" />
+                <User className="w-5 h-5 text-gray-800" />
               </Link>
               <Link
                 href="/cart"
                 className="p-2 rounded-full hover:bg-gray-100 relative"
                 aria-label="Cart"
               >
-                <ShoppingBag className="w-5 h-5" />
+                <ShoppingBag className="w-5 h-5 text-gray-800" />
                 <span className="absolute top-0 right-0 -mt-1 -mr-1 bg-indigo-600 text-white text-xs w-4 h-4 rounded-full flex items-center justify-center">
                   0
                 </span>
@@ -154,28 +154,28 @@ export default function Navbar() {
               <div className="py-2">
                 <Link
                   href="/collections/women"
-                  className="block px-4 py-3 text-lg hover:bg-gray-50"
+                  className="block px-4 py-3 text-gray-800 text-lg hover:bg-gray-50"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Women
                 </Link>
                 <Link
                   href="/collections/men"
-                  className="block px-4 py-3 text-lg hover:bg-gray-50"
+                  className="block px-4 py-3 text-gray-800 text-lg hover:bg-gray-50"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Men
                 </Link>
                 <Link
                   href="/collections/kids"
-                  className="block px-4 py-3 text-lg hover:bg-gray-50"
+                  className="block px-4 py-3 text-gray-800 text-lg hover:bg-gray-50"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Kids
                 </Link>
                 <Link
                   href="/collections/jewelry"
-                  className="block px-4 py-3 text-lg hover:bg-gray-50"
+                  className="block px-4 py-3 text-lg text-gray-800 hover:bg-gray-50"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Jewelry
@@ -193,7 +193,7 @@ export default function Navbar() {
                 <div className="py-2">
                   <Link
                     href="/account"
-                    className="flex items-center px-4 py-3 hover:bg-gray-50"
+                    className="flex items-center px-4 py-3 text-gray-800 hover:bg-gray-50"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     <User className="w-5 h-5 mr-3" />
@@ -201,7 +201,7 @@ export default function Navbar() {
                   </Link>
                   <Link
                     href="/wishlist"
-                    className="flex items-center px-4 py-3 hover:bg-gray-50"
+                    className="flex items-center px-4 py-3 text-gray-800 hover:bg-gray-50"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     <Heart className="w-5 h-5 mr-3" />
@@ -209,7 +209,7 @@ export default function Navbar() {
                   </Link>
                   <Link
                     href="/orders"
-                    className="flex items-center px-4 py-3 hover:bg-gray-50"
+                    className="flex items-center text-gray-800 px-4 py-3 hover:bg-gray-50"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     <ShoppingBag className="w-5 h-5 mr-3" />

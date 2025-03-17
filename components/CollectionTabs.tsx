@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import ProductCard from './ProductCard';
 import { Product } from '@/lib/data';
+import Link from 'next/link';
 
 interface CollectionTabsProps {
   products: Product[];
@@ -80,13 +81,13 @@ export default function CollectionTabs({ products }: CollectionTabsProps) {
 
         {/* View All Button */}
         <div className="text-center mt-12">
-          <a
+          <Link
             href="/products"
             className="inline-block border-2 border-indigo-600 text-indigo-600 px-8 py-3 rounded-full font-medium
               hover:bg-indigo-600 hover:text-white transition-colors duration-300"
           >
             View All Products
-          </a>
+          </Link>
         </div>
       </div>
     </section>

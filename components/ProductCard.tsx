@@ -18,7 +18,7 @@ interface ProductCardProps {
 }
 
 export default function ProductCard(props: ProductCardProps) {
-  const { id, name, price, image, description, colors, sizes, isNew, isBestseller } = props;
+  const { id, name, price, image, colors, sizes, isNew, isBestseller } = props;
   const [isHovered, setIsHovered] = useState(false);
 
   // Color display mapping
@@ -102,7 +102,7 @@ export default function ProductCard(props: ProductCardProps) {
                 {sizes.slice(0, 4).map((size) => (
                   <div 
                     key={size} 
-                    className="text-xs px-1.5 py-0.5 border border-gray-300 rounded"
+                    className="text-xs text-gray-800 px-1.5 py-0.5 border border-gray-300 rounded"
                   >
                     {size}
                   </div>

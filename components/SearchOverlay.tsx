@@ -83,11 +83,11 @@ export default function SearchOverlay({ isOpen, onClose }: SearchOverlayProps) {
             </div>
           ) : searchResults.length === 0 ? (
             <div className="text-center py-12">
-              <p className="text-gray-500">No products found matching "{searchTerm}"</p>
+              <p className="text-gray-500">No products found matching {searchTerm}</p>
             </div>
           ) : (
             <div>
-              <p className="text-sm text-gray-500 mb-4">Found {searchResults.length} results for "{searchTerm}"</p>
+              <p className="text-sm text-gray-500 mb-4">Found {searchResults.length} results for {searchTerm}</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 {searchResults.map((product) => (
                   <Link 
@@ -107,7 +107,7 @@ export default function SearchOverlay({ isOpen, onClose }: SearchOverlayProps) {
                     <h3 className="font-medium text-gray-900">{product.name}</h3>
                     <p className="text-indigo-600 font-medium">${product.price.toFixed(2)}</p>
                     <p className="text-xs text-gray-500 mt-1">
-                      {product.collection.charAt(0).toUpperCase() + product.collection.slice(1)}'s {product.category}
+                      {product.collection.charAt(0).toUpperCase() + product.collection.slice(1)}s {product.category}
                     </p>
                   </Link>
                 ))}
